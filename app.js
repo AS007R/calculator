@@ -1,4 +1,5 @@
 import inquirer from "inquirer";
+import chalk from "chalk";
 const answers = await inquirer.prompt([
     {
         type: "number",
@@ -32,8 +33,8 @@ if (numberOne && numberTwo && operator) {
     if (operator === "*") {
         result = numberOne * numberTwo;
     }
-    console.log("Your result is :", result);
+    console.log(chalk.blue("Your result is :", result));
 }
 else {
-    console.log("Kindly enter valid input");
+    console.log(chalk.red("Kindly enter valid input"));
 }
